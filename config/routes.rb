@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get("/flexible/square/:number", {:controller => "calculations", :action => "flexible_square_5"})
+  get("/flexible/square_root/:number", {:controller => "calculations", :action => "flexible_square_root_5"})
+  get("/flexible/payment/:rate/:term/:principal", {:controller => "calculations", :action => "flexible_payment"})
 end
