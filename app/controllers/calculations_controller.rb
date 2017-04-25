@@ -56,4 +56,15 @@ class CalculationsController < ApplicationController
     render("calculations/square.html.erb")
   end
 
+  def square_root_form
+
+    render("calculations/square_root_form.html.erb")
+
+  end
+
+  def square_root
+    @user_num = params[:user_num].to_f
+    render("calculations/square_root.html.erb")
+  end
+
 end
