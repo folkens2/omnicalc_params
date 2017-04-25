@@ -13,7 +13,7 @@ class CalculationsController < ApplicationController
   def flexible_square_root_5
 
     @user_num = params["number"].to_f
-    @user_num_square_root = @user_num ** 0.5
+    @user_num_square_root = @user_num ** 0.5)
 
     render("calculations/flexible_square_root_5.html.erb")
 
