@@ -32,7 +32,7 @@ class CalculationsController < ApplicationController
     # The principal value the user input is in the decimal @principal.
     # ================================================================================
 
-    monthly_apr = @apr/100/12
+    monthly_apr = @apr/(100*100)/12
     months = @years*12
     numerator = monthly_apr*((1+monthly_apr)**months)
     denominator = ((1+monthly_apr)**months) - 1
