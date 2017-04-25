@@ -1,0 +1,39 @@
+<h1>
+  Payment Results
+</h1>
+
+<div>
+  <label for="">
+    APR
+  </label>
+</div>
+<div>
+  <%= @user_apr %>
+</div>
+
+<div>
+  <label for="">
+    Number of years
+  </label>
+</div>
+<div>
+  <%= @user_term %>
+</div>
+
+<div>
+  <label for="">
+    Principal
+  </label>
+</div>
+<div>
+  <%= number_to_currency(@user_principal) %>
+</div>
+
+<div>
+  <label for="">
+    Payment
+  </label>
+</div>
+<div>
+  <%= number_to_currency(@user_payment) %>
+</div>

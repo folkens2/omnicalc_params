@@ -74,7 +74,10 @@ class CalculationsController < ApplicationController
   end
 
   def payment
-    @user_num = params[:user_num].to_f
+    @user_apr = params[:user_apr].to_f
+    @user_term = params[:user_term].to_f
+    @user_principal = params[:user_principal].to_f
+    @user_payment = @user_apr*@user_term*@user_principal
     render("calculations/payment.html.erb")
   end
 
