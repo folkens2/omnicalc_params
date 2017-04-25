@@ -78,7 +78,16 @@ class CalculationsController < ApplicationController
     @user_term = params[:user_term].to_f
     @user_principal = params[:user_principal].to_f
     @user_payment = @user_apr*@user_term*@user_principal
+
+    monthly_apr = @user_apr/100/12
+    months = @user_term*12
+    numerator = monthly_apr*((1+monthly_apr)**months)
+    denominator = ((1+monthly_apr)**months) - 1
+
+    @user_payment = @user_principal*(numerator/denominator)
+
     render("calculations/payment.html.erb")
+
   end
 
 end
